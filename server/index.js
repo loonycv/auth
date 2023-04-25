@@ -14,9 +14,11 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    credentials: true,
-    origin: "https://master--auth-loony.netlify.app/",
+    // credentials: true,
+    // origin: process.env.CLIENT_URL,
+    origin: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+    credentials: true,
   })
 );
 // app.enableCors({
@@ -24,7 +26,6 @@ app.use(
 //   methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
 //   credentials: true,
 // });
-app.options("*", cors());
 app.use("/api", router);
 app.use(errorMiddleware);
 

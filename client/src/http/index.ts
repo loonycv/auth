@@ -1,7 +1,7 @@
 import axios from "axios";
 import { AuthResponse } from "../models/response/AuthResponse";
 
-export const API_URL = `https://fish.herokuapp.com/api`;
+export const API_URL = `http://localhost:5001/api`;
 
 const $api = axios.create({
   withCredentials: true,
