@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: process.env.CLIENT_URL,
+    origin: "https://master--auth-loony.netlify.app/",
   })
 );
 app.use("/api", router);
