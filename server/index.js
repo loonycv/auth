@@ -18,6 +18,7 @@ app.use(
     origin: "https://master--auth-loony.netlify.app/",
   })
 );
+app.options("*", cors());
 app.use("/api", router);
 app.use(errorMiddleware);
 
